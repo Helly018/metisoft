@@ -1,0 +1,40 @@
+<aside class="w-64 bg-white border-r border-slate-200 p-6 flex flex-col justify-between sticky top-0 h-screen z-40">
+  <div class="space-y-8">
+    <div class="flex items-center gap-3">
+      <!-- <span class="text-2xl font-bold bg-indigo-600 text-white p-2 rounded-lg">A</span> -->
+      <h1 class="text-lg font-bold tracking-tight text-slate-900">Admin Portal</h1>
+    </div>
+
+    <nav class="space-y-2">
+      <button
+        (click)="selectTab('overview')"
+        class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition cursor-pointer text-left"
+        [class.bg-indigo-50]="activeTab === 'overview'"
+        [class.text-indigo-600]="activeTab === 'overview'"
+        [class.text-slate-600]="activeTab !== 'overview'"
+        [class.hover:bg-slate-50]="activeTab !== 'overview'"
+        [class.hover:text-slate-900]="activeTab !== 'overview'"
+      >
+        <i class="bi bi-grid-1x2-fill"></i>
+        Dashboard
+      </button>
+      <button
+        (click)="selectTab('users')"
+        class="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition cursor-pointer text-left"
+        [class.bg-indigo-50]="activeTab === 'users'"
+        [class.text-indigo-600]="activeTab === 'users'"
+        [class.text-slate-600]="activeTab !== 'users'"
+        [class.hover:bg-slate-50]="activeTab !== 'users'"
+        [class.hover:text-slate-900]="activeTab !== 'users'"
+      >
+        <i class="bi bi-people-fill"></i>
+        Users
+      </button>
+    </nav>
+  </div>
+
+  <button (click)="triggerLogout()" class="w-full flex items-center gap-3 px-4 py-3 border border-slate-200 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition cursor-pointer text-left">
+    <i class="bi bi-box-arrow-right"></i>
+    Logout
+  </button>
+</aside>

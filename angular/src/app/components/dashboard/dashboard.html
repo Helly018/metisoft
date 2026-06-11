@@ -1,0 +1,17 @@
+<div class="space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div
+      (click)="navigateToUsers()"
+      class="p-6 bg-white border border-slate-200 rounded-lg cursor-pointer shadow hover:border-slate-350 transition-colors"
+    >
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-sm font-semibold text-slate-500">Total Users</span>
+        <span class="p-2.5 bg-slate-50 text-indigo-600 rounded-lg">
+          <i class="bi bi-people-fill text-lg"></i>
+        </span>
+      </div>
+      <div class="text-4xl font-extrabold text-slate-900 mb-2">{{ records().length }}</div>
+      <span class="text-xs text-indigo-600 hover:underline">Manage users</span>
+    </div>
+  </div>
+</div>
